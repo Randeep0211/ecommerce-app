@@ -24,7 +24,7 @@ const createProduct = (req,res)=>{
         let product = new Product(fields)
 
         if(files.photo){
-            console.log(files.photo)
+            // console.log(files.photo)
             product.photo.data = fs.readFileSync(files.photo.filepath)
             product.photo.contentType = files.photo.type
         }
