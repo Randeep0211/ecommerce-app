@@ -13,6 +13,7 @@ const routes = require("./Routes/route")
 const router = require("./Routes/user")
 const categoryRoutes = require("./Routes/category")
 const productRoutes = require("./Routes/product")
+// const productIdRoutes = require("./Routes/productIdRoute")
 
 
 
@@ -46,6 +47,7 @@ app.use(routes)
 app.use(router)
 app.use(categoryRoutes)
 app.use(productRoutes)
+// app.use(productIdRoutes)
  
 
 // Server
