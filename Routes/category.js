@@ -8,6 +8,7 @@ const requireSignIn = require('../Controller/auth')
 const userId = require('../Controller/user')
 const {categoryId , read } = require("../Controller/categoryRead")
 const updateCategory = require("../Controller/categoryUpdate")
+const deleteCategory = require('../Controller/categoryDelete')
 
 routes.param('categoryId' , categoryId)
 routes.param('userId' , userId)
@@ -18,6 +19,8 @@ routes.post('/category/create/:userId' , requireSignIn, isAuth, isAdmin, createC
 routes.get('/category/read/:categoryId' , read )
 
 routes.put('/category/update/:categoryId/:userId' , requireSignIn , isAuth , isAdmin ,  updateCategory)
+
+routes.delete('/category/delete/:categoryId/:userId', requireSignIn , isAuth , isAdmin, deleteCategory)
 
 
 
